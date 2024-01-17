@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content="VuePress 2.0.0-rc.0" />
+    <meta name="theme" content="VuePress Theme Hope 2.0.0-rc.11" />
+    <style>
+      html {
+        background: var(--bg-color, #fff);
+      }
+
+      html[data-theme="dark"] {
+        background: var(--bg-color, #1d1e1f);
+      }
+
+      body {
+        background: var(--bg-color);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem("vuepress-theme-hope-scheme");
+      const systemDarkMode =
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+      if (userMode === "dark" || (userMode !== "light" && systemDarkMode)) {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    </script>
+    <meta property="og:url" content="https://gitee.com/xu-huang/mynotes/blog/"><meta property="og:site_name" content="小佟の学习笔记"><meta property="og:type" content="website"><meta property="og:locale" content="zh-CN"><meta property="og:updated_time" content="2024-01-17T12:31:18.000Z"><meta property="article:author" content="Mr.Tong"><meta property="article:modified_time" content="2024-01-17T12:31:18.000Z"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":""}</script><link rel="icon" href="/favicon.svg"><title>小佟の学习笔记</title><meta name="description" content="">
+    <link rel="preload" href="/mynotes/assets/style-BonzS8Iw.css" as="style"><link rel="stylesheet" href="/mynotes/assets/style-BonzS8Iw.css">
+    <link rel="modulepreload" href="/mynotes/assets/app-eTV6WgGQ.js"><link rel="modulepreload" href="/mynotes/assets/index.html-meDu8kKC.js"><link rel="modulepreload" href="/mynotes/assets/index.html-NolZo2Yi.js"><link rel="modulepreload" href="/mynotes/assets/plugin-vue_export-helper-x3n3nnut.js">
+    
+  </head>
+  <body>
+    <div id="app"><!--[--><!----><!----><!--]--></div>
+    <script type="module" src="/mynotes/assets/app-eTV6WgGQ.js" defer></script>
+  </body>
+</html>

@@ -7,12 +7,12 @@ import { zhSidebar } from "./sidebar/index.js";
 // 主题设置
 export default hopeTheme({
   // 当前网站部署到的域名
-  hostname: "https://gitee.com/oucystong",
+  hostname: "https://gitee.com/xu-huang",
 
   // 文章显示的默认作者
   author: {
     name: "Mr.Tong",
-    url: "https://gitee.com/oucystong",
+    url: "https://gitee.com/xu-huang",
   },
 
   // 使用官方提供的图标库-也可以构建自己的图标库
@@ -22,7 +22,7 @@ export default hopeTheme({
   logo: "/site_logo.png",
 
   // 导航栏上的个人仓库地址
-  repo: "https://gitee.com/oucystong",
+  repo: "https://gitee.com/xu-huang",
 
   // 自定义仓库链接文字-默认从repo中自动推断为"GitHub" / "GitLab" / "Gitee" / "Bitbucket" 其中之一，或是 "Source"。
   repoLabel: "Gitee",
@@ -69,7 +69,7 @@ export default hopeTheme({
   contributors: false,
 
   // 文章所在仓库
-  docsRepo: "https://gitee.com/oucystong/notes.git",
+  docsRepo: "https://gitee.com/xu-huang/wiki.git",
 
   // 文章所在分支
   docsBranch: "master",
@@ -110,7 +110,7 @@ export default hopeTheme({
     description: "你是无意穿堂风 偏偏孤倨引山洪",
     // 社交媒体
     medias: {
-      Gitee: "https://gitee.com/oucystong",
+      Gitee: "https://gitee.com/xu-huang",
     },
     // 博客的侧边栏设置
     sidebarDisplay: "mobile",
@@ -183,10 +183,11 @@ export default hopeTheme({
       vuePlayground: true,
     },
     // 打开博客功能
-    blog: {
-      // 在文章列表页面自动提取文章的摘要进行显示
-      autoExcerpt: true,
-    },
+    // blog: {
+    //   // 在文章列表页面自动提取文章的摘要进行显示
+    //   autoExcerpt: true,
+    // },
+    blog:true,
     // 开启git实现编辑此页面-最后更新时间-贡献者功能
     git: true,
     // 关闭sitemap插件
