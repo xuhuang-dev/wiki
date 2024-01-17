@@ -47,12 +47,12 @@ export default hopeTheme({
   breadcrumbIcon: true,
 
   // 用户可以自定义的多主题色
-  themeColor: {
-    yellow: "#FEC201",
-    pink: "#EF699F",
-    purple: "#684CCE",
-    orange: "#FF8C3D",
-  },
+  // themeColor: {
+  //   yellow: "#FEC201",
+  //   pink: "#EF699F",
+  //   purple: "#684CCE",
+  //   orange: "#FF8C3D",
+  // },
   // 暗黑模式切换-在深色模式和浅色模式中切换
   darkmode: "toggle",
   // 全屏按钮
@@ -118,19 +118,20 @@ export default hopeTheme({
     articlePerPage: 7,
     timeline: "小佟の时光轴🍃",
   },
-  plugin: {
-    search:{},
+  plugins: {
     // 在MD文件中启用的组件
-    components: [
-      // 为站点提供了在MD文档中自定义颜色的徽章
-      "Badge",
-      // 为站点提供了在MD文档中加载B站视频的功能，但是不建议使用
-      "BiliBili",
-      // 为站点提供了在MD文档中加载PDF阅读器的功能，但是不建议使用
-      // 原因一：PDF书籍较大，上传到码云后会大量占用码云空间
-      // 原因二：当PDF阅读器较多的时候，将MD文档渲染成HTML页面比较耗费性能，使页面加载速度变慢
-      "PDF",
-    ],
+    components: {
+      components:[
+        // 为站点提供了在MD文档中自定义颜色的徽章
+        "Badge",
+        // 为站点提供了在MD文档中加载B站视频的功能，但是不建议使用
+        "BiliBili",
+        // 为站点提供了在MD文档中加载PDF阅读器的功能，但是不建议使用
+        // 原因一：PDF书籍较大，上传到码云后会大量占用码云空间
+        // 原因二：当PDF阅读器较多的时候，将MD文档渲染成HTML页面比较耗费性能，使页面加载速度变慢
+        "PDF",
+      ]
+    },
     // 代码复制功能-vuepress-plugin-copy-code2
     copyCode: {
       // 在移动端也可以实现复制代码
@@ -141,53 +142,52 @@ export default hopeTheme({
       fancy: false,
     },
     // MarkDown文件增强
-    mdEnhance: {
-      align: true,
-      attrs: true,
-      chart: true,
-      codetabs: true,
-      hint: true,
-      demo: true,
-      echarts: true,
-      flowchart: true,
-      gfm: true,
-      imgSize: true,
-      include: true,
-      katex: true,
-      // lazyLoad: true,
-      mark: true,
-      mermaid: true,
-      playground: {
-        presets: ["ts", "vue"],
-      },
-      revealJs: {
-        plugins: ["highlight", "math", "search", "notes", "zoom"],
-      },
-      stylize: [
-        {
-          matcher: "Recommanded",
-          replacer: ({ tag }) => {
-            if (tag === "em")
-              return {
-                tag: "Badge",
-                attrs: { type: "tip" },
-                content: "Recommanded",
-              };
-          },
-        },
-      ],
-      sub: true,
-      sup: true,
-      tabs: true,
-      // vpre: true,
-      vuePlayground: true,
-    },
-    // 打开博客功能
-    // blog: {
-    //   // 在文章列表页面自动提取文章的摘要进行显示
-    //   autoExcerpt: true,
+    // mdEnhance: {
+    //   align: true,
+    //   attrs: true,
+    //   chart: true,
+    //   codetabs: true,
+    //   hint: true,
+    //   demo: true,
+    //   echarts: true,
+    //   flowchart: true,
+    //   gfm: true,
+    //   imgSize: true,
+    //   include: true,
+    //   katex: true,
+    //   // lazyLoad: true,
+    //   mark: true,
+    //   mermaid: true,
+    //   playground: {
+    //     presets: ["ts", "vue"],
+    //   },
+    //   revealJs: {
+    //     plugins: ["highlight", "math", "search", "notes", "zoom"],
+    //   },
+    //   stylize: [
+    //     {
+    //       matcher: "Recommanded",
+    //       replacer: ({ tag }) => {
+    //         if (tag === "em")
+    //           return {
+    //             tag: "Badge",
+    //             attrs: { type: "tip" },
+    //             content: "Recommanded",
+    //           };
+    //       },
+    //     },
+    //   ],
+    //   sub: true,
+    //   sup: true,
+    //   tabs: true,
+    //   // vpre: true,
+    //   vuePlayground: true,
     // },
-    blog:true,
+    // 打开博客功能
+    blog: {
+      excerptLength: 0,
+    },
+    // blog:true,
     // 开启git实现编辑此页面-最后更新时间-贡献者功能
     git: true,
     // 关闭sitemap插件
